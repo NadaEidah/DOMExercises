@@ -1,0 +1,2 @@
+# DOMExercises
+JavaScript exercises DOM
