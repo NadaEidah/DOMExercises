@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <meta charset="UTF-8">
+    <title>Exercise #7: Simple playlist</title>
+    <link rel="stylesheet" href="exercise7.css">
+    <script>
+
+function SimplePlay(){
+        var songClick=document.getElementById("songTextInput").value;
+        var x= document.createElement("li");
+        x.id=songClick;
+        document.getElementById("playlist").appendChild(x);
+       	x.innerHTML=songClick;
+            }
+  function noSimplePlay(){
+            var valueOfClick1=document.getElementById("songTextInput").value;
+            var l1=document.getElementById(valueOfClick1);
+            l1.remove();
+        }
+
+ 
+    </script>
+</head>
+<body>
+
+<form>
+    <input type="text" id="songTextInput" size="40" placeholder="Song name">
+    <input type="button" id="addButton" value="Add Song" onclick="SimplePlay()">
+    <input type="button" id="addButton" value="Delet Song" onclick="noSimplePlay()">
+</form>
+
+<ul id="playlist" >
+	
+</ul>
+
+</body>
+</html>
+
+

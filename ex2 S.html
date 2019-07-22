@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #2: Changing colors</title>
+    <style>
+        #mydiv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+             
+        }
+    </style>
+  
+</head>
+<body>
+<div id="mydiv" onmusemove="click1()" ></div>
+
+
+<script type="text/javascript">
+        function changeColor() {
+            var color = this.style.backgroundColor;
+            var newcolor;
+            switch (color) {
+                case "red":
+                    newcolor = "green";
+                    break;
+                case "green":
+                    newcolor = "blue";
+                    break;
+                case "blue":
+                    newcolor = "red";
+                    break;
+                
+            }
+            this.style.backgroundColor = newcolor;
+        }
+        function init() {
+            var mydiv = document.getElementById("mydiv");
+            mydiv.style.backgroundColor = "blue";
+            mydiv.onclick = changeColor;
+        }
+        window.onload = init;
+    </script>
+</body>
+</html>
+  
+  
+
+
+<!-- https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp -->
